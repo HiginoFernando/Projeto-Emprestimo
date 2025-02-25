@@ -1,0 +1,18 @@
+
+INSERT INTO livro (titulo, autor, ano_publicacao) VALUES
+('Dom Casmurro', 'Machado de Assis', 1899),
+('1984', 'George Orwell', 1949),
+('O Senhor dos Anéis', 'J.R.R. Tolkien', 1954),
+('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 1943),
+('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 1997);
+
+
+INSERT INTO usuario (nome, email) VALUES
+('Carlos Silva', 'carlos.silva@email.com'),
+('Mariana Souza', 'mariana.souza@email.com'),
+('João Pedro', 'joao.pedro@email.com');
+
+INSERT INTO emprestimo (livro_id, usuario_id, data_emprestimo, data_devolucao_prevista) VALUES
+(1, 1, '2025-02-01', '2025-02-15'),
+(3, 2, '2025-02-05', '2025-02-19'),
+(5, 3, '2025-02-10', '2025-02-24');
