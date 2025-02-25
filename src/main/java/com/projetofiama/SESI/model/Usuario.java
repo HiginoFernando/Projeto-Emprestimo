@@ -1,9 +1,11 @@
 package com.projetofiama.SESI.model;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -14,7 +16,9 @@ public class Usuario {
     private String nome;
     private String email;
 
-   
+    @OneToMany(mappedBy = "usuario")
+    private List<Emprestimo> emprestimos;
+
     public Usuario() {
     }
 
@@ -46,5 +50,13 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Emprestimo> getEmprestimos() {
+        return emprestimos;
+    }
+
+    public void setEmprestimos(List<Emprestimo> emprestimos) {
+        this.emprestimos = emprestimos;
     }
 }
